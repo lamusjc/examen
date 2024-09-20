@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div>
+    <ion-button (click)="mostrar('quick')">Quick</ion-button>
+    <ion-button (click)="mostrar('merge')">Merge</ion-button>
+    <div style="width: 50%">
+      <h3>Arreglo {{title}} time {{time + ' ms'}}</h3>
+      <h3 *ngIf="mejor">{{mejor}}</h3>
+      <pre><code>{{ver | json}}</code></pre>
+    </div>
+
+  </div>
+
+
+</ion-content>
